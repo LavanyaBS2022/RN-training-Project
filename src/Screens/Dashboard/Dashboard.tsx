@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from "../../Utils/types";
 import { NavScreens, TabScreens } from "../../Types/Screens";
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Text, View, Button, StyleSheet, Alert } from 'react-native';
  
 type DashboardProps = NativeStackScreenProps<RootStackParamList, TabScreens.DASHBOARD>;
 
 const Dashboard: React.FC<DashboardProps> = ({ navigation }) => {
+
+    // const [name, setname] = useState<string>('')
+
+    // useEffect(() => {
+    //     Alert.alert('Hi')
+    // },[])
+
     const goToNotification=()=>{
-        navigation.navigate(NavScreens.NOTIFICATION,{notification:'A small message from dashboard'})
+        navigation.navigate(NavScreens.NOTIFICATION,{notification:{id:20,
+            title:"Test Title",
+            message:"some important message"
+        }})
     }
     return (
         <View style={styles.container}>

@@ -41,7 +41,8 @@ const NonAuthStackScreens = () => (
       />
       <AuthStack.Screen 
       name={NavScreens.CALENDAR}
-      component={Calendar}/>
+      component={Calendar}
+        options={{ presentation: 'modal' }}/>
     </AuthStack.Navigator>
   );
   

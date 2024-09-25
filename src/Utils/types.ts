@@ -3,7 +3,7 @@ export type RootStackParamList={
     Otp:undefined;
     Dashboard:undefined;
     Profile:undefined;
-    Notification:{notification:string};
+    Notification:{notification:NotificationType};
     Calendar:undefined;
     TabNavigation:undefined;
 }
